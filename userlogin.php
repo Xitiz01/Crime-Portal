@@ -6,9 +6,9 @@
     
 if(isset($_POST['s']))
 {
-    session_start();
-    $_SESSION['x']=1;
-    $con=mysqli_connect("localhost","root","","crime_protal");
+    // session_start();
+    // $_SESSION['x']=1;
+    $con=mysqli_connect("localhost","root","","crime-protal");
     if(!$con)
     {
         die("could not connect".mysqli_error());
@@ -17,27 +17,40 @@ if(isset($_POST['s']))
     
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
-        $name=$_POST['email'];
+      // die("hello");
+      $name=$_POST['email'];
         $pass=$_POST['password'];
-        $result=mysqli_query( $con,"SELECT u_id,u_pass FROM user where u_id='$name' and u_pass='$pass' ");
-       
+        // $result=mysqli_query( $con,"SELECT u_id,u_pass FROM user where u_id='$name' and u_pass='$pass' ");
+        $result=mysqli_query( $con,"SELECT u_id FROM user where u_id='$name'");
+        $row=mysqli_fetch_assoc($result); 
+        print_r($row);
+        die();
+        if(password_verify($pass, $row['u_pass' ]))
+        {  
+          session_start();
+          $_SESSION['x']=1;
           $u_id=$_POST['email'];
           $_SESSION['u_id']=$u_id;
+
+        }
+        // var_dump($result);
+        //   $u_id=$_POST['email'];
+        //   $_SESSION['u_id']=$u_id;
+
    
-        
-        if(mysqli_num_rows($result)==0)
+        else
         {
              $message = "Id or Password not Matched.";
              echo "<script type='text/javascript'>alert('$message');</script>";
-        }
-        else 
+         }
+        // else 
         {
-          header("location:complainer_page.php");
+           header("location:complainer_page.php");
         }
     }                
-}
+ }
 ?> 
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     
@@ -109,4 +122,4 @@ var x3=sta3.indexOf(' ');
 </div>
 
 </body>
-</html>
+</html> 

@@ -6,18 +6,18 @@
     session_start();
     if(!isset($_SESSION['x']))
         header("location:headlogin.php");
-    $conn=mysql_connect("localhost","root","");
-    if(!$conn)
+    $con=mysqli_connect("localhost","root","","crime_protal");
+    if(!$con)
     {
-        die("could not connect".mysql_error());
+        die("could not connect".mysqli_error());
     }
-    mysql_select_db("crime_portal",$conn);
+    // mysqli_select_db("crime_portal",$con);
     
     $c_id=$_SESSION['cid'];
         
     $query="select c_id,description,inc_status,pol_status,location from complaint where c_id='$c_id'";
-    $result=mysql_query($query,$conn);
-     $res2=mysql_query("select d_o_u,case_update from update_case where c_id='$c_id'",$conn);
+    $result=mysqli_query($con,$query);
+     $res2=mysqli_query($con,"select d_o_u,case_update from update_case where c_id='$c_id'");
   ?>
 
 	<title>Case Details</title>
@@ -61,7 +61,7 @@
     </tr>
        </thead>
       <?php
-              while($rows=mysql_fetch_assoc($result)){
+              while($rows=mysqli_fetch_assoc($result)){
              ?> 
        <tbody style="background-color: white; color: black;">
     <tr>
@@ -88,7 +88,7 @@
     </tr>
        </thead>
       <?php
-              while($rows1=mysql_fetch_assoc($res2)){
+              while($rows1=mysqli_fetch_assoc($res2)){
              ?> 
        <tbody style="background-color: white; color: black;">
     <tr>

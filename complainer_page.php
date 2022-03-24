@@ -132,8 +132,8 @@ if(isset($_POST['s'])){
 			<br><br>
 			<div class="login-form"><p><h2 style="color:white">Welcome <?php echo "$u_name" ?></h2></p><br>
                                     <p><h2>Log New Complain</h2></p><br>	
-				<form action="#" method="post" style="color: gray">Aadhar
-					<input type="text"  name="aadhar_number" placeholder="Aadhar Number" required="" disabled value=<?php echo "$a_no"; ?>>
+				<form action="#" method="post" style="color: gray">citizenship
+					<input type="text"  name="citizenship_number" placeholder="citizenship Number" required="" disabled value=<?php echo "$a_no"; ?>>
 					
 				<div class="top-w3-agile" style="color: gray">Location of Crime
                     
@@ -160,6 +160,7 @@ if(isset($_POST['s'])){
                         <option>Molestation</option>
                         <option>Kidnapping</option>
                         <option>Missing Person</option>
+                        <option>Cyber Crime</option>
 				    </select>
 				</div>
 					<div class="Top-w3-agile" style="color: gray">

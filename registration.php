@@ -21,11 +21,12 @@ if(isset($_POST['s'])){
         $u_id=$_POST['email'];
         $u_pass=$_POST['password'];
         $u_addr=$_POST['adress'];
-        $a_no=$_POST['aadhar_number'];
+        $c_no=$_POST['citizenship_number'];
         $gen=$_POST['gender'];
         $mob=$_POST['mobile_number'];
        // $password=md5($u_pass);
-       $reg="insert into user values('$u_name','$u_id','$u_pass','$u_addr','$a_no','$gen','$mob')";
+       $u_pass=password_hash($u_pass, PASSWORD_BCRYPT);
+       $reg="insert into user values('$u_name','$u_id','$u_pass','$u_addr','$c_no','$gen','$mob')";
         // mysqli_select_db("crime_portal");
         $res=mysqli_query($con,$reg);
         if(!$res)
@@ -131,7 +132,7 @@ if(isset($_POST['s'])){
 					<p style="color:#dfdfdf">Email-Id</p><input type="email"  name="email"  required="" id="email1" onfocusout="f1()"/>
                     <p style="color:#dfdfdf">Password</p><input type="text"  name="password"  placeholder="6 Character minimum" pattern=".{6,}" id="pass" onfocusout="f1()"/>
 					<p style="color:#dfdfdf">Home Adress</p><input type="text"  name="adress"  required="" id="addr" onfocusout="f1()"/>
-					<p style="color:#dfdfdf">Aadhar Number</p><input type="text"  name="aadhar_number" minlength="12" maxlength="12" required pattern="[123456789][0-9]{11}" id="aadh" onfocusout="f1()"/>
+					<p style="color:#dfdfdf">Citizenship Number</p><input type="text"  name="citizenship_number" minlength="11" maxlength="11" required pattern="[0-9]{11}" id="aadh" onfocusout="f1()"/>
 					<div class="left-w3-agile">
 						<p style="color:#dfdfdf">Gender</p><select class="form-control" name="gender">
 							<option>Male</option>
