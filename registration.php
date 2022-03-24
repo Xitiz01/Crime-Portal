@@ -25,7 +25,8 @@ if(isset($_POST['s'])){
         $gen=$_POST['gender'];
         $mob=$_POST['mobile_number'];
        // $password=md5($u_pass);
-       $u_pass=password_hash($u_pass, PASSWORD_BCRYPT);
+       $u_pass=password_hash($u_pass, PASSWORD_DEFAULT);
+       
        $reg="insert into user values('$u_name','$u_id','$u_pass','$u_addr','$c_no','$gen','$mob')";
         // mysqli_select_db("crime_portal");
         $res=mysqli_query($con,$reg);

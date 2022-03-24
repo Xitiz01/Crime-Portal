@@ -143,7 +143,7 @@ INSERT INTO `update_case` (`c_id`, `d_o_u`, `case_update`) VALUES
 CREATE TABLE `user` (
   `u_name` varchar(50) NOT NULL,
   `u_id` varchar(50) NOT NULL,
-  `u_pass` varchar(50) NOT NULL,
+  `u_pass` varchar(255) NOT NULL,
   `u_addr` varchar(100) NOT NULL,
   `a_no` bigint(12) NOT NULL,
   `gen` varchar(15) NOT NULL,
