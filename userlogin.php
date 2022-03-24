@@ -8,7 +8,7 @@ if(isset($_POST['s']))
 {
     // session_start();
     // $_SESSION['x']=1;
-    $con=mysqli_connect("localhost","root","","crime-protal");
+    $con=mysqli_connect("localhost","root","","crime_protal");
     if(!$con)
     {
         die("could not connect".mysqli_error());
@@ -21,12 +21,11 @@ if(isset($_POST['s']))
       $name=$_POST['email'];
         $pass=$_POST['password'];
         // $result=mysqli_query( $con,"SELECT u_id,u_pass FROM user where u_id='$name' and u_pass='$pass' ");
-        $result=mysqli_query( $con,"SELECT u_id FROM user where u_id='$name'");
+        $result=mysqli_query( $con,"SELECT * FROM user where u_id='$name'");
         $row=mysqli_fetch_assoc($result);
          
-        print_r($row);
-        die();
-        if(password_verify($pass, $row['u_pass' ]))
+        // print_r($row);
+        if(password_verify($pass, $row['u_pass']))
         {  
           session_start();
           $_SESSION['x']=1;
