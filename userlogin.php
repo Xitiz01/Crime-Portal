@@ -22,7 +22,8 @@ if(isset($_POST['s']))
         $pass=$_POST['password'];
         // $result=mysqli_query( $con,"SELECT u_id,u_pass FROM user where u_id='$name' and u_pass='$pass' ");
         $result=mysqli_query( $con,"SELECT u_id FROM user where u_id='$name'");
-        $row=mysqli_fetch_assoc($result); 
+        $row=mysqli_fetch_assoc($result);
+         
         print_r($row);
         die();
         if(password_verify($pass, $row['u_pass' ]))
