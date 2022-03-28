@@ -32,18 +32,21 @@ if(isset($_POST['s'])){
         $res=mysqli_query($con,$reg);
         if(!$res)
         {
+
         $message1 = "User Already Exist";
         echo "<script type='text/javascript'>alert('$message1');</script>";
     }
             else
-    {
+    {    
         $message = "User Registered Successfully";
-        confirm($message);
-        // echo "<script type='text/javascript'>alert('$message');</script>";
-    
+        //confirm($message);
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        echo"<script>window.location.href='userlogin.php';</script>";
+           
       }
-
       // header('Location: userlogin.php');
+
+
 
 
     }
