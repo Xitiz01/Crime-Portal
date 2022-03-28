@@ -38,10 +38,26 @@ if(isset($_POST['s'])){
             else
     {
         $message = "User Registered Successfully";
-        echo "<script type='text/javascript'>alert('$message');</script>";
+        confirm($message);
+        // echo "<script type='text/javascript'>alert('$message');</script>";
+    
+      }
+
+      // header('Location: userlogin.php');
+
+
     }
-    }
+    // // if(emptyInputSignup($u_name,$u_id,$u_pass,$u_addr,$c_no,$gen,$mob)!==false) {
+    //   // $message="User registered successfully";
+    //   // echo "<script type='text/javascript'>alert('$message');</script>";
+    //   // exit();
+    // }
+    
+
 }
+// header('Location: userlogin.php')
+
+
 ?>
   
 <script>

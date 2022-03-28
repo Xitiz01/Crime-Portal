@@ -60,9 +60,9 @@
         <th scope="col">Complaint Id</th>
         <th scope="col">Type of Crime</th>
         <th scope="col">Date of Crime</th>
-          <th scope="col">Location of Crime</th>
-          <th scope="col">Complainant Mobile</th>
-          <th scope="col">Complainant Address</th>
+        <th scope="col">Location of Crime</th>
+        <th scope="col">Complainant Mobile</th>
+        <th scope="col">Complainant Address</th>
         
       </tr>
     </thead>
@@ -77,8 +77,8 @@
         <td><?php echo $rows['type_crime']; ?></td>     
         <td><?php echo $rows['d_o_c']; ?></td>   
         <td><?php echo $rows['location']; ?></td>
-          <td><?php echo $rows['mob']; ?></td>
-          <td><?php echo $rows['u_addr']; ?></td>
+        <td><?php echo $rows['mob']; ?></td>
+        <td><?php echo $rows['u_addr']; ?></td>
                   
       </tr>
     </tbody>

@@ -118,7 +118,7 @@ var x3=sta3.indexOf(' ');
    background-color: rgba(0,0,0,0.7);
    color: white;
    text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
+  <h4 style="color: white;">&copy <b>Final year project-Crime Portal </b></h4>
 </div>
 
 </body>

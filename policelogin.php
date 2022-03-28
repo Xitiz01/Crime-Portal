@@ -62,7 +62,7 @@ if(sta2!="" && x2>=0){
     
     
 </head>
-<body style="color: black;background-image: url(locker.jpeg);background-size: 100%;background-repeat: no-repeat;">
+<body style="color: black;background-image: url(police.jpg);background-size: 100%;background-repeat: no-repeat;">
 	<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -101,7 +101,7 @@ if(sta2!="" && x2>=0){
    background-color: rgba(0,0,0,0.8);
    color: white;
    text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
+  <h4 style="color: white;">&copy <b>Final year project-Crime Portal</b></h4>
 </div> 
 
 
