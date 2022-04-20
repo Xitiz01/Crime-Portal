@@ -79,6 +79,7 @@
         <td><?php echo $rows['location']; ?></td>
         <td><?php echo $rows['mob']; ?></td>
         <td><?php echo $rows['u_addr']; ?></td>
+        
                   
       </tr>
     </tbody>

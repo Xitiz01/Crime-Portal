@@ -59,6 +59,7 @@ if(isset($_POST['s'])){
       {
           $message = "Complaint Registered Successfully";
           echo "<script type='text/javascript'>alert('$message');</script>";
+          echo"<script>window.location.href='complainer_complain_history.php';</script>";
       }
     }
     else
@@ -172,8 +173,15 @@ if(isset($_POST['s'])){
 					Description
 						<textarea  name="description" rows="20" cols="50" placeholder="Describe the incident in details with time" onfocusout="f1()" id="desc" required></textarea>
 					</div>
+          <div>
+          <input type="file" name="file">
+          <div action="upload.php" method="POST" enctype="multipart/form-data">
+          <br>
+          <!-- <button type="submit" name="submit">UPLOAD</button> -->
+          </div>
+          </div>
 					<input type="submit" value="Submit" name="s">
-				</form>	
+				</form>
 			</div>	
 		</div>
 	</div>	

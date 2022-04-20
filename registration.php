@@ -25,7 +25,7 @@ if(isset($_POST['s'])){
         $gen=$_POST['gender'];
         $mob=$_POST['mobile_number'];
        // $password=md5($u_pass);
-       $u_pass=password_hash($u_pass, PASSWORD_DEFAULT);
+       $u_pass=password_hash($u_pass, PASSWORD_BCRYPT);
        
        $reg="insert into user values('$u_name','$u_id','$u_pass','$u_addr','$c_no','$gen','$mob')";
         // mysqli_select_db("crime_portal");
@@ -39,26 +39,18 @@ if(isset($_POST['s'])){
             else
     {    
         $message = "User Registered Successfully";
-        //confirm($message);
         echo "<script type='text/javascript'>alert('$message');</script>";
         echo"<script>window.location.href='userlogin.php';</script>";
            
       }
-      // header('Location: userlogin.php');
-
+     
 
 
 
     }
-    // // if(emptyInputSignup($u_name,$u_id,$u_pass,$u_addr,$c_no,$gen,$mob)!==false) {
-    //   // $message="User registered successfully";
-    //   // echo "<script type='text/javascript'>alert('$message');</script>";
-    //   // exit();
-    // }
-    
+   
 
 }
-// header('Location: userlogin.php')
 
 
 ?>

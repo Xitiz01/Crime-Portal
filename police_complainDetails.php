@@ -148,11 +148,16 @@
         
          
       <select class="form-control" style="align-content: center;margin-top: 20px; margin-left: 35%; width: 180px;" name="update">
-          <option>Criminal Verified</option>
+          <option>Official Complaint Registered</option>
+          <option>Investication Started</option> 
+          <option>Suspect Confirmed</option>   
+          <option>Suspect Verified</option>
           <option>Criminal Caught</option>
           <option>Criminal Interrogated</option>
           <option>Criminal Accepted the Crime</option>
-          <option>Criminal Charged</option>
+          <option>Criminal Sentenced To Prison</option>
+          <option>Case Closed</option>
+          <option>Case Reopened</option>
       </select>
 
       <input class="btn btn-primary btn-sm" type="submit" value="Update Case Status" name="status" style="margin-top: 10px; margin-left: 40%;">

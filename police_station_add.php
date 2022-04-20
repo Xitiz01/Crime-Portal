@@ -39,6 +39,7 @@ if(isset($_POST['s'])){
     {
         $message = "Police Station Added Successfully";
         echo "<script type='text/javascript'>alert('$message');</script>";
+        echo"<script>window.location.href='head_view_police_station.php';</script>";
     }
     }
 }

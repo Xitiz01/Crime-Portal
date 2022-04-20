@@ -38,15 +38,23 @@
      $result=mysqli_query($con,"SELECT c_id,type_crime,d_o_c,location FROM complaint where p_id='$p_id' and pol_status='In Process' order by c_id desc");
     ?>
  <script>
-     function f1()
-        {
-        var sta2=document.getElementById("ciid").value;
-        var x2=sta2.indexOf(' ');
-      if(sta2!="" && x2>=0){
-          document.getElementById("ciid").value="";
-          alert("Blank Field Found");
-        }
-}
+//      function f1()
+//         {
+//         var sta2=document.getElementById("ciid").value;
+//         var x2=sta2.indexOf(' ');
+//       if(sta2!="" && x2>=0){
+//           document.getElementById("ciid").value="";
+//           alert("Blank Field Found");
+//         }
+// }
+         function f1()
+         {
+           var sta2=document.getElementById("ciid").value;
+           var x2=sta2.indexOf(' ');
+            if(sta2!="" && x2>=0){
+            document.getElementById("ciid").value="";
+            alert("Blank Field Found");
+         }
 </script>
 </head>
 <body>

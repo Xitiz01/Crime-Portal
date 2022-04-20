@@ -107,6 +107,7 @@ session_start();
         
      <form style="margin-top: 3%; margin-left: 40%;" method="post">
      <select name="loc" class="form-control" style="width: 250px;">
+     <option hidden>Select Location</option>
          
 						<?php
                         $loc=mysqli_query($con,"select location from police_station");
