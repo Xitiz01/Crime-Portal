@@ -129,7 +129,7 @@ if(isset($_POST['s'])){
 					Police Id<input type="text"  name="police_id" placeholder="Police Id" required="" id="pid" onfocusout="f1()"/>
                     Specialist<input type="text"  name="police_spec" placeholder="Specialist" id="pspec" required onfocusout="f1()"/>
                     
-                    Location of Police Officer<input type="text" required  placeholder="location" disabled value="<?php echo "$location"; ?>">
+                    Location of Police Officer<input type="text" required  placeholder="location" > 
           <br>
 					Password<input type="text"  name="password" placeholder="Password" id="pas" onfocusout="f1()" required/>
 					<input type="submit" value="Submit" name="s">

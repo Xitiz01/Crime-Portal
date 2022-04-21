@@ -36,6 +36,7 @@
     
     $p_id=$_SESSION['pol'];
      $result=mysqli_query($con,"SELECT c_id,type_crime,d_o_c,location FROM complaint where p_id='$p_id' and pol_status='In Process' order by c_id desc");
+     die($result);
     ?>
  <script>
 //      function f1()
@@ -104,7 +105,8 @@
     </thead>
 
 <?php
-      while($rows=mysqli_fetch_assoc($result)){
+die(mysqli_fetch_assoc($result));
+while($rows=mysqli_fetch_assoc($result)){
     ?> 
 
     <tbody style="background-color: white; color: black;">

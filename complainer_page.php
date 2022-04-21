@@ -171,7 +171,7 @@ if(isset($_POST['s'])){
 					<br>
 					<div class="top-w3-agile" style="color: gray">
 					Description
-						<textarea  name="description" rows="20" cols="50" placeholder="Describe the incident in details with time" onfocusout="f1()" id="desc" required></textarea>
+						<textarea  name="description" rows="20" cols="50" placeholder="Describe the incident in details" onfocusout="f1()" id="desc" required></textarea>
 					</div>
           <div>
           <input type="file" name="file">
