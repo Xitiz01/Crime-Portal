@@ -40,14 +40,20 @@
  		<div class="col-lg-12">
  			<div class="content">
  				<h1>Have a Complaint?</h1>
-         <h2><a href="userlogin.php"> Log In </a></h2>
+         <a href="userlogin.php" class="btn btn-default btn-lg" role="button" aria-pressed="true">Log In!</a>
  				<h3>Register Below &nbsp &nbsp<i class="fa fa-hand-o-down" aria-hidden="true"></i></h3>
  				<hr>
           <a href="registration.php" class="btn btn-default btn-lg" role="button" aria-pressed="true">Sign Up!</a>
- 			</div>
+ 			
+      
+        </div>
  		</div>
  	</div>
  </div>
+ 
+
+
+
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
